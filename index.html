@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Dosis:wght@200..800&family=Mountains+of+Christmas:wght@400;700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="img/Icon.png" id="favicon">
+	<title>The Christmas Crypts</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="textScreen" id="startScreen">
+		<div class="title" id="title">
+			<h2>Welcome to:</h2>
+			<h1>THE CHRISTMAS CRYPTS!</h1>
+			<div id="instructions">
+				<div class="movement" id="letterMovement">
+					<kbd>W</kbd><br>
+					<kbd>A</kbd>
+					<kbd>S</kbd>
+					<kbd>D</kbd>
+				</div>
+				<p><br>or</p>
+				<div class="movement" id="arrowMovement">
+					<kbd>↑</kbd><br>
+					<kbd>←</kbd>
+					<kbd>↓</kbd>
+					<kbd>→</kbd>
+				</div>
+				<br><p>to <br> move</p>
+			</div>
+			<div id="goalAndMotive">
+				<p>To finish each level, get to the golden chest and unlock it using a golden key, open doors using silver keys, and find the hidden Golden Presents!</p>
+			</div>
+		</div>
+		<button onclick="startGame()"><p>Start</p></button>
+	</div>
+	<div class="textScreen" id="preEndScreen">
+		<div class="title" id="congratsTitle">
+			<h1 id="congrats">Congratulations!</h1>
+			<h2 id="subCongrats">You won! And here are your stats:</h2>
+			<ul>
+				<p>In total you got:</p>
+				<li id="coinStat"></li>
+				<li id="keyStat"></li>
+				<li id="timeStat"></li>
+				<li id="scoreStat"></li>
+				<li id="goldenStat"></li>
+			</ul>
+			<div id="nameInput">
+				<label for="leaderboardName">Input your name to be on the leaderboard, or leave blank</label><br>
+				<p id="nameTakenError"></p>
+				<form id="submit">
+					<input type="text" name="leaderboardName" id="leaderboardName" maxlength="20">
+					<input type="submit" id="submitName" value="Send">
+				</form>
+			</div>
+		</div>
+	</div>
+	<canvas id="gameCanvas" width="750" height="300"></canvas>
+	<div id="inventory">
+		<img src="/img/characterAndTileset/coin.png" alt="Coins"><p class="counter" id="coinCount">0</p>
+		<img src="/img/characterAndTileset/silverKey.png" alt="Silver Keys"><p class="counter" id="silverCount">0</p>
+		<img src="/img/characterAndTileset/goldKey.png" alt="Gold Keys"><p class="counter" id="goldCount">0</p>
+	</div>
+	<div id="health">
+		<img src="/img/RedHeart/32x32/32x32RedHeart1.png" id="heart1" alt="Full Heart">
+		<img src="/img/RedHeart/32x32/32x32RedHeart1.png" id="heart2" alt="Full Heart">
+		<img src="/img/RedHeart/32x32/32x32RedHeart1.png" id="heart3" alt="Full Heart">
+		<img src="/img/RedHeart/32x32/32x32RedHeart1.png" id="heart4" alt="Full Heart">
+	</div>
+<script src="js/script.js"></script>
+</body>
+</html>

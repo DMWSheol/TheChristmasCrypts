@@ -1,0 +1,246 @@
+body {
+  background-color: black;
+}
+#gameCanvas{
+  width: 99%;
+}
+.textScreen{
+  margin-top: 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+kbd {
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.2),
+    0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  color: #333;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 700;
+  margin-top: 2%;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+#instructions{
+  user-select: none;
+  width: 40vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 6vw;
+}
+.movement{
+  margin: 5%;
+}
+
+#debug label{
+  font-size: 0.5em;
+}
+#currentLevel,#classLevel  {
+  color: white;
+  position: absolute;
+  justify-content: center;
+  left: 500px;
+}
+#currentLevel{
+  bottom: 10px;
+  left: 550px;
+}
+
+
+#goalAndMotive{
+  position: absolute;
+  line-height: 1.4em;
+  font-size: .8em;
+}
+#nameTakenError{
+  display: none;
+  position: relative;
+  margin-top: -3vh; 
+  margin-bottom: -.8vh; 
+  margin-left: 5vw;
+  color: rgb(192, 26, 26);
+  text-align: left;
+  font-size: .6em;
+}
+#preEndScreen{
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#leaderboard{
+  color: white;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  overflow: scroll;
+}
+tr, th{
+  text-align: left;
+  border-bottom: 1px solid white;
+}
+button{
+  font-family: "Mountains of Christmas", serif;
+  background-image: url('../img/button.jpg');
+  opacity: 0.8;
+  bottom: 8.5vh;
+  margin-top: 50vh;
+  position: absolute;
+	height: 6vh;
+	width: 10vw;
+}
+button p{
+  font-family: "Mountains of Christmas", serif;
+	-webkit-filter: brightness(100%);
+  filter: brightness(100%);
+	color: white;
+	font-size: 1.5em;
+	margin: 0;
+}
+button:hover {
+  -webkit-filter: brightness(90%);
+  filter: brightness(90%);
+	cursor: pointer;
+}
+
+button:active {
+  -webkit-filter: brightness(85%);
+  filter: brightness(85%);
+}
+
+.title{
+	font-family: 'Mountains of Christmas', serif;
+	text-align: center;
+	font-size: 2em;
+	position: relative;
+  line-height: 30px;
+	/* display: inline-block; */
+  color: white;
+	overflow: visible;
+}
+#preEndScreen .title{
+  font-size: 1.4em;
+}
+#nameInput{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+#leaderboardName{
+  width: 15vw;
+  height: 3vh;
+  margin-right: 3vw;
+  margin-top: 1vh;
+}
+#submitName{
+  width: 7vw;
+  height: 6vh;
+  margin-bottom: 200vh;
+  margin-left: -.6vw;
+  background-image: url(../img/button.jpg);
+  font-family: "Mountains of Christmas", serif;
+	-webkit-filter: brightness(100%);
+  filter: brightness(100%);
+	color: white;
+	font-size: .8em;
+	margin: 0;
+}
+#submitName:hover {
+  -webkit-filter: brightness(90%);
+  filter: brightness(90%);
+	cursor: pointer;
+}
+#submitName:active {
+  -webkit-filter: brightness(85%);
+  filter: brightness(85%);
+}
+
+
+
+#submit{
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+}
+#leaderboardScreen{
+  display: none;
+}
+ul{
+  margin-left: 0;
+  list-style-type: none;
+  font-size: 1.4em;
+  line-height: 7vh;
+}
+ul p{
+  margin-bottom: 1vh;
+}
+#gameCanvas {
+  display: none;
+  text-align: center;
+  margin-bottom: -40px;
+}
+#inventory{
+  margin-left: 40px;
+  display: none;
+  flex-direction: row;
+}
+#health{
+  margin-left: 40px;
+  display: none;
+  position: absolute;
+  right: 30vw;
+  bottom: 5.6vh;
+  flex-direction: row;
+}
+.counter{
+  font-family: "Mountains of Christmas", serif;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 3em;
+  color: white;
+}
+#inventory img{
+  width: 60px;
+  height: 60px;
+  margin-left: 50px;
+}
+#health img{
+  width: 50px;
+  height: 50px;
+  margin-left: 5px;
+}
+#heart1{
+  animation: float 3.5s ease-in-out infinite;
+}
+#heart2{
+  animation: float 3.5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+#heart3{
+  animation: float 3.5s ease-in-out infinite;
+  animation-delay: 2s;
+}
+#heart4{
+  animation: float 3.5s ease-in-out infinite;
+  animation-delay: 3s;
+}
+@keyframes float {
+  0% {
+      transform: translateY(0);
+  }
+
+  50% {
+      transform: translateY(-3px);
+  }
+
+  100% {
+      transform: translateY(0);
+  }
+}
